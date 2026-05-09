@@ -1,0 +1,33 @@
+[package]
+name = "cd-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[[bin]]
+name = "codedesign"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+# CodeDesign crates used at runtime
+cd-plan      = { path = "../cd-plan" }
+cd-canvas    = { path = "../cd-canvas" }
+cd-figma-mcp = { path = "../cd-figma-mcp" }
+cd-ds        = { path = "../cd-ds" }
+cd-prompts   = { path = "../cd-prompts" }
+cd-critique  = { path = "../cd-critique" }
+cd-brief     = { path = "../cd-brief" }
+cd-tools     = { path = "../cd-tools" }
+cd-skill     = { path = "../cd-skill" }
+cd-summarizer = { path = "../cd-summarizer" }
+
+serde       = { workspace = true }
+serde_json  = { workspace = true }
+base64      = { workspace = true }
+ureq        = { version = "2.10", features = ["json", "tls"] }
+
+[dev-dependencies]

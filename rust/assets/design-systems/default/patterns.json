@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "patterns": {
+    "onboarding.step": {
+      "structure": ["hero", "title", "body", "primaryCta", "secondaryCta?"],
+      "layout": "VERTICAL",
+      "padding": "space.xl"
+    },
+    "list.empty-state": {
+      "structure": ["illustration?", "title", "body", "primaryCta"],
+      "rule": "必须含 primaryCta,文案为引导动作,不得为'暂无数据'"
+    },
+    "form.error-state": {
+      "structure": ["inputField", "error.text", "retry.cta?"],
+      "rule": "error.text 必须明确原因;无法恢复时必须提供 secondary 退路"
+    }
+  }
+}

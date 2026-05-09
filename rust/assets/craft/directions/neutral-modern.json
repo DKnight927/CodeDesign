@@ -1,0 +1,29 @@
+{
+  "id": "neutral-modern",
+  "name": "Neutral Modern",
+  "oneLine": "Low-saturation grayscale with restrained accent; Inter/Söhne; generous spacing.",
+  "posture": {
+    "density": "airy",
+    "tone": ["calm", "trustworthy", "precise"],
+    "cornerRadius": "sm",
+    "shadow": "subtle-only"
+  },
+  "palette": {
+    "bg":   { "base": "oklch(0.99 0 0)", "raised": "oklch(0.97 0 0)" },
+    "text": { "primary": "oklch(0.20 0 0)", "secondary": "oklch(0.45 0 0)", "tertiary": "oklch(0.60 0 0)" },
+    "border": { "default": "oklch(0.90 0 0)", "strong": "oklch(0.80 0 0)" },
+    "brand":  { "primary": "oklch(0.55 0.05 250)", "onPrimary": "oklch(0.99 0 0)" },
+    "state":  { "info": "oklch(0.60 0.12 240)", "success": "oklch(0.65 0.12 150)", "warning": "oklch(0.75 0.15 75)", "danger": "oklch(0.60 0.18 25)" }
+  },
+  "typography": {
+    "stack": ["Inter", "Söhne", "Pretendard", "system-ui"],
+    "displayStack": ["Inter Display", "Söhne Breit"],
+    "scale": [12, 13, 14, 16, 18, 20, 24, 32, 40, 56]
+  },
+  "spacingBase": 4,
+  "rules": [
+    "No gradients on functional UI; only allowed in hero illustration",
+    "Accent color used for interactive only, not for decoration",
+    "All icons stroke-only, 1.5px weight"
+  ]
+}

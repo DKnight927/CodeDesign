@@ -10,3 +10,9 @@ archive/
 .claw/sessions/
 .clawhip/
 status-help.txt
+
+# CodeDesign local artifacts
+.comate/
+
+# npm binaries are populated by CI from GH Release artifacts
+npm/codedesign/binaries/

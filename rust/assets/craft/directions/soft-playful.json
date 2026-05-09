@@ -1,0 +1,29 @@
+{
+  "id": "soft-playful",
+  "name": "Soft Playful",
+  "oneLine": "Rounded corners, pastel duo-tones (decorative only), friendly posture.",
+  "posture": {
+    "density": "comfortable",
+    "tone": ["friendly", "optimistic", "approachable"],
+    "cornerRadius": "xl",
+    "shadow": "soft-only"
+  },
+  "palette": {
+    "bg":   { "base": "oklch(0.99 0.01 80)", "raised": "oklch(0.96 0.02 80)" },
+    "text": { "primary": "oklch(0.28 0.03 280)", "secondary": "oklch(0.50 0.04 280)", "tertiary": "oklch(0.65 0.04 280)" },
+    "border": { "default": "oklch(0.90 0.03 280)", "strong": "oklch(0.80 0.05 280)" },
+    "brand":  { "primary": "oklch(0.72 0.14 340)", "onPrimary": "oklch(0.99 0.01 80)" },
+    "state":  { "info": "oklch(0.72 0.12 240)", "success": "oklch(0.75 0.13 145)", "warning": "oklch(0.82 0.12 85)", "danger": "oklch(0.68 0.15 25)" }
+  },
+  "typography": {
+    "stack": ["Nunito", "Noto Sans SC"],
+    "displayStack": ["Nunito", "Caveat"],
+    "scale": [13, 14, 16, 18, 20, 24, 28, 36, 48]
+  },
+  "spacingBase": 8,
+  "rules": [
+    "Pastel gradients limited to decorative hero and empty state illustration",
+    "Corner radius ≥ 8px on cards, ≥ 12px on modals",
+    "Hand-written font (Caveat) used only for occasional accent, never body"
+  ]
+}

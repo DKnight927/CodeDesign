@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "_spec": "open-design transferables 2026-05-09: exact hex list 7, emoji list 17. Lowercase hex enforced at lint time.",
+  "bannedHex": [
+    "#6366f1", "#4f46e5", "#4338ca", "#3730a3",
+    "#8b5cf6", "#7c3aed", "#a855f7"
+  ],
+  "bannedEmojiInFunctionalRole": [
+    "\u2728", "\uD83D\uDE80", "\uD83C\uDFAF", "\u26A1", "\uD83D\uDD25",
+    "\uD83D\uDCA1", "\uD83D\uDCC8", "\uD83C\uDFA8", "\uD83D\uDEE1\uFE0F", "\uD83C\uDF1F",
+    "\uD83D\uDCAA", "\uD83C\uDF89", "\uD83D\uDC4B", "\uD83D\uDE4C", "\u2705",
+    "\u2B50", "\uD83C\uDFC6"
+  ],
+  "bannedPlaceholderRegex": [
+    "(?i)\\blorem ipsum\\b",
+    "(?i)\\bconsectetur adipiscing\\b",
+    "(?i)\\bsed do eiusmod\\b",
+    "(?i)\\bfeature[\\s_-]?(one|two|three|1|2|3)\\b",
+    "占位|示例文本|这里是描述|描述文字|待填写"
+  ],
+  "bannedDisplayFonts": [
+    "Helvetica", "Helvetica Neue", "Arial", "Arial Black",
+    "PingFang SC", "Microsoft YaHei", "\u5FAE\u8F6F\u96C5\u9ED1",
+    "Segoe UI", "San Francisco", "-apple-system", "BlinkMacSystemFont"
+  ],
+  "fabricatedMetricRegex": [
+    "\\b\\d+(\\.\\d+)?\\s*%",
+    "\\b\\d+\\s*[xX]\\s+(faster|better|more|improvement)\\b",
+    "\\$\\s*\\d+(,\\d{3})*(\\.\\d+)?\\s*[KMB]\\b"
+  ],
+  "featureNumberingPrefix": [
+    "^\\s*(\\d+[\\.\\)、]\\s*)",
+    "^\\s*(No\\.?\\s*\\d+)"
+  ],
+  "trustKeywords": [
+    "testimonial", "trust", "security", "privacy", "legal",
+    "\u8bc1\u8a00", "\u5b89\u5168", "\u9690\u79c1", "\u6cd5\u5f8b"
+  ]
+}

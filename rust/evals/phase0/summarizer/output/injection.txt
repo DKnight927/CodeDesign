@@ -1,0 +1,22 @@
+=== PRIOR SESSION SUMMARY ===
+
+Facts:
+- Anchor #0: mobile iOS first, Android second
+- Anchor #1: brand=acme, accent=terracotta
+- Anchor #3: DS ref: acme-editorial@1.2.0
+- Anchor #4: min font size 14px, no violet/indigo
+
+Decisions:
+- Anchor #2: direction picked: warm-editorial
+- Anchor #5: skill activated: figma-mobile-onboarding
+
+Open questions:
+- Anchor #7: open question: confirm empty-state copy tone
+
+Tool results digest:
+- Read DS tokens: ok, 123 tokens
+- Listed frames: f1, f2
+- Applied spacing token space.md
+- Gate-1 validator passed
+
+LastPlanId: p_onboard_042

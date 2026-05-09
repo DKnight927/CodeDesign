@@ -1,0 +1,54 @@
+{
+  "id": "sample-c",
+  "direction": "tech-utility",
+  "dsSummary": {
+    "colors": [
+      "color.bg.base (deep near-black or deep slate)",
+      "color.bg.elevated",
+      "color.text.primary (near-white)",
+      "color.text.secondary (muted gray)",
+      "color.border.subtle",
+      "color.data.1 / data.2 / data.3 / data.4 (distinct data-vis hues)",
+      "color.feedback.critical",
+      "color.feedback.warning",
+      "color.feedback.ok"
+    ],
+    "typography": [
+      "typo.title.md (20/28)",
+      "typo.body.sm (14/20)",
+      "typo.mono.sm (mono 13/20 for values)",
+      "typo.label.xs (12/16 uppercase tracking)"
+    ],
+    "spacingBase": 4,
+    "components": ["button.primary", "input.text", "table.row", "metric.card", "alert.row", "tag.status"],
+    "doNotRules": [
+      "Never use decorative gradients.",
+      "Data colors are reserved for data-vis ONLY, never for buttons or backgrounds.",
+      "No emoji in status indicators; use semantic tokens."
+    ]
+  },
+  "prd": "SRE 实时指标看板。顶部 KPI 行(QPS、P99、错误率、在线实例数);中部 4 宫格图表(时间序列折线);下部告警列表(时间、等级、服务、摘要、操作)。需要高信息密度,深色优先,关键告警突出但不喧宾夺主。",
+  "cases": [
+    {
+      "id": "grafana-dark",
+      "description": "Grafana 深色面板:顶栏 KPI 数字 + 时间范围选择,下方 2x2 图表,行间距紧凑,mono 字体显示值。",
+      "tags": ["dark","dashboard","data"],
+      "doNot": ["不要把数据色用在按钮","不要多层装饰"],
+      "scenarios": ["dashboard"]
+    },
+    {
+      "id": "datadog-alerts",
+      "description": "Datadog 告警列表:表格风格,每行 level 圆点 + 时间戳 + 服务名 + 摘要,右侧操作按钮。",
+      "tags": ["table","alerts","status"],
+      "doNot": ["不要用 emoji 做告警级别","不要把状态色当装饰"],
+      "scenarios": ["alerts","list"]
+    },
+    {
+      "id": "linear-dark-issues",
+      "description": "Linear 深色 issues:信息密度高、行高紧凑、标签 / 状态通过轻微色点 + 灰阶文字传达。",
+      "tags": ["dark","dense","list"],
+      "doNot": ["不要鲜艳大色块","不要圆角过大"],
+      "scenarios": ["list"]
+    }
+  ]
+}

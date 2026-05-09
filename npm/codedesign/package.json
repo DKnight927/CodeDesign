@@ -1,0 +1,36 @@
+{
+  "name": "@wz927/codedesign",
+  "version": "0.0.3",
+  "description": "Terminal design agent — generate Figma designs from natural-language PRDs.",
+  "keywords": [
+    "figma",
+    "design",
+    "ai",
+    "agent",
+    "cli",
+    "deepseek",
+    "kimi"
+  ],
+  "license": "MIT",
+  "bin": {
+    "codedesign": "bin/codedesign.js"
+  },
+  "files": [
+    "bin/",
+    "binaries/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
+}

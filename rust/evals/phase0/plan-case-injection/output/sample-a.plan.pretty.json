@@ -1,0 +1,259 @@
+{
+    "planId": "p_sample-a_001",
+    "dsRef": "default@1.0.0",
+    "projectId": "phase0-s03-sample-a",
+    "intent": "create_screens",
+    "stepKind": "skeleton",
+    "frames": [
+        {
+            "id": "login",
+            "name": "\u767b\u5f55\u9875",
+            "layout": {
+                "type": "centered",
+                "verticalAlign": "center",
+                "horizontalAlign": "center"
+            },
+            "regions": [
+                {
+                    "id": "login-bg",
+                    "type": "surface",
+                    "fill": "color.bg.base"
+                },
+                {
+                    "id": "login-card",
+                    "type": "card",
+                    "component": "card.default",
+                    "children": [
+                        {
+                            "id": "login-title",
+                            "type": "text",
+                            "style": "typo.title.lg",
+                            "color": "color.text.primary",
+                            "content": "\u767b\u5f55\u60a8\u7684\u8d26\u6237"
+                        },
+                        {
+                            "id": "email-input",
+                            "type": "input",
+                            "component": "input.text",
+                            "label": "\u5de5\u4f5c\u90ae\u7bb1"
+                        },
+                        {
+                            "id": "password-input",
+                            "type": "input",
+                            "component": "input.text",
+                            "label": "\u5bc6\u7801"
+                        },
+                        {
+                            "id": "login-error",
+                            "type": "text",
+                            "style": "typo.caption.sm",
+                            "color": "color.feedback.error",
+                            "content": "\u90ae\u7bb1\u6216\u5bc6\u7801\u9519\u8bef\uff0c\u8bf7\u68c0\u67e5\u540e\u91cd\u8bd5\u3002"
+                        },
+                        {
+                            "id": "login-submit",
+                            "type": "button",
+                            "component": "button.primary",
+                            "label": "\u767b\u5f55"
+                        },
+                        {
+                            "id": "sso-separator",
+                            "type": "divider"
+                        },
+                        {
+                            "id": "sso-google",
+                            "type": "button",
+                            "component": "button.secondary",
+                            "label": "\u901a\u8fc7 Google \u767b\u5f55"
+                        },
+                        {
+                            "id": "sso-microsoft",
+                            "type": "button",
+                            "component": "button.secondary",
+                            "label": "\u901a\u8fc7 Microsoft \u767b\u5f55"
+                        },
+                        {
+                            "id": "forgot-link",
+                            "type": "text",
+                            "style": "typo.caption.sm",
+                            "color": "color.accent.primary",
+                            "content": "\u5fd8\u8bb0\u5bc6\u7801\uff1f"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "home",
+            "name": "\u4e3b\u9875",
+            "layout": {
+                "type": "sidebar-main"
+            },
+            "regions": [
+                {
+                    "id": "sidebar",
+                    "type": "surface",
+                    "fill": "color.bg.elevated",
+                    "width": "narrow",
+                    "children": [
+                        {
+                            "id": "brand",
+                            "type": "text",
+                            "style": "typo.title.md",
+                            "color": "color.text.primary",
+                            "content": "\u534f\u4f5c\u5e73\u53f0"
+                        },
+                        {
+                            "id": "nav-projects",
+                            "type": "nav-item",
+                            "component": "nav.item",
+                            "label": "\u9879\u76ee",
+                            "style": "typo.body.md"
+                        },
+                        {
+                            "id": "nav-team",
+                            "type": "nav-item",
+                            "component": "nav.item",
+                            "label": "\u56e2\u961f",
+                            "style": "typo.body.md"
+                        },
+                        {
+                            "id": "nav-settings",
+                            "type": "nav-item",
+                            "component": "nav.item",
+                            "label": "\u4e2a\u4eba\u8bbe\u7f6e",
+                            "style": "typo.body.md"
+                        }
+                    ]
+                },
+                {
+                    "id": "main",
+                    "type": "surface",
+                    "fill": "color.bg.base",
+                    "children": [
+                        {
+                            "id": "page-title",
+                            "type": "text",
+                            "style": "typo.title.lg",
+                            "color": "color.text.primary",
+                            "content": "\u4eca\u65e5\u5de5\u4f5c"
+                        },
+                        {
+                            "id": "kpi-bar",
+                            "type": "h-stack",
+                            "children": [
+                                {
+                                    "id": "kpi-todo",
+                                    "type": "text",
+                                    "style": "typo.caption.sm",
+                                    "color": "color.text.secondary",
+                                    "content": "\u5f85\u529e 5"
+                                },
+                                {
+                                    "id": "kpi-inprogress",
+                                    "type": "text",
+                                    "style": "typo.caption.sm",
+                                    "color": "color.text.secondary",
+                                    "content": "\u8fdb\u884c\u4e2d 2"
+                                },
+                                {
+                                    "id": "kpi-mentions",
+                                    "type": "text",
+                                    "style": "typo.caption.sm",
+                                    "color": "color.text.secondary",
+                                    "content": "@\u63d0\u53ca 1"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "content-split",
+                            "type": "grid",
+                            "columns": [
+                                "2fr",
+                                "1fr"
+                            ],
+                            "children": [
+                                {
+                                    "id": "col-primary",
+                                    "type": "v-stack",
+                                    "children": [
+                                        {
+                                            "id": "tasks-header",
+                                            "type": "text",
+                                            "style": "typo.title.md",
+                                            "color": "color.text.primary",
+                                            "content": "\u4eca\u65e5\u5f85\u529e"
+                                        },
+                                        {
+                                            "id": "tasks-list",
+                                            "type": "list"
+                                        },
+                                        {
+                                            "id": "projects-header",
+                                            "type": "text",
+                                            "style": "typo.title.md",
+                                            "color": "color.text.primary",
+                                            "content": "\u6700\u8fd1\u9879\u76ee"
+                                        },
+                                        {
+                                            "id": "projects-grid",
+                                            "type": "grid",
+                                            "children": [
+                                                {
+                                                    "type": "card",
+                                                    "component": "card.default"
+                                                },
+                                                {
+                                                    "type": "card",
+                                                    "component": "card.default"
+                                                },
+                                                {
+                                                    "type": "card",
+                                                    "component": "card.default"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "col-secondary",
+                                    "type": "v-stack",
+                                    "children": [
+                                        {
+                                            "id": "activity-header",
+                                            "type": "text",
+                                            "style": "typo.title.md",
+                                            "color": "color.text.primary",
+                                            "content": "\u56e2\u961f\u52a8\u6001"
+                                        },
+                                        {
+                                            "id": "activity-list",
+                                            "type": "list"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "rationale": "\u767b\u5f55\u9875\u91c7\u7528\u4e2d\u592e\u5355\u5361\u7247\u5e03\u5c40\uff08\u53c2\u8003 Notion \u767b\u5f55\uff09\uff0c\u5782\u76f4\u5806\u53e0\u8868\u5355\u3001SSO \u6309\u94ae\u4e0e\u8f85\u52a9\u94fe\u63a5\uff0c\u5927\u91cf\u7559\u767d\u964d\u4f4e\u8ba4\u77e5\u8d1f\u8377\uff1b\u4e3b\u9875\u91c7\u7528\u5de6\u4fa7\u7a84\u5bfc\u822a + \u53f3\u4fa7\u4e3b\u5185\u5bb9\u533a\uff08\u53c2\u8003 Linear Inbox\uff09\uff0c\u5e76\u4ee5\u300c\u4eca\u65e5\u5de5\u4f5c\u300d\u4e3a\u9875\u5934\uff0c\u9996\u884c\u5373\u5c55\u793a\u4eca\u65e5\u5f85\u529e\u3001\u8fdb\u884c\u4e2d\u4e0e @\u63d0\u53ca\u7684 KPI \u6761\uff08\u53c2\u8003 Stripe Dashboard\uff09\uff0c\u968f\u540e\u7d27\u8ddf\u4efb\u52a1\u5217\u8868\uff0c\u786e\u4fdd\u7ba1\u7406\u5458\u5728\u8fdb\u5165\u9875\u9762 5 \u79d2\u5185\u5373\u53ef\u5b9a\u4f4d\u4eca\u65e5\u4efb\u52a1\u3002\u6574\u4f53\u4e25\u683c\u4f7f\u7528\u7070\u9636 + \u5355\u4e00\u5f3a\u8c03\u8272\uff0c\u65e0\u88c5\u9970\u56fe\u3001\u65e0\u591a\u8272\u6807\u7b7e\u3001\u65e0\u9971\u548c\u80cc\u666f\u5757\uff0c\u4fdd\u6301\u4e13\u4e1a\u514b\u5236\u3002",
+    "components_to_create": [
+        "nav.item"
+    ],
+    "craft_asserts": [
+        "\u767b\u5f55\u9875\u9519\u8bef\u63d0\u793a\u5fc5\u987b\u4f7f\u7528 color.feedback.error\uff0c\u5e76\u4f4d\u4e8e\u5bc6\u7801\u8f93\u5165\u6846\u4e0e\u767b\u5f55\u6309\u94ae\u4e4b\u95f4\u3002",
+        "\u4e3b\u9875\u300c\u4eca\u65e5\u5f85\u529e\u300d\u5217\u8868\u5fc5\u987b\u4f4d\u4e8e\u9996\u5c4f\u53ef\u89c6\u533a\u57df\uff0c\u65e0\u9700\u6eda\u52a8\u5373\u53ef\u67e5\u770b\u3002",
+        "\u5de6\u4fa7\u5bfc\u822a\u680f\u5fc5\u987b\u4f7f\u7528 color.bg.elevated\uff0c\u4e0e\u4e3b\u5185\u5bb9\u533a\u5f62\u6210\u660e\u786e\u5c42\u7ea7\u3002",
+        "\u6240\u6709\u6587\u672c\u5b57\u53f7\u4e0d\u5f97\u5c0f\u4e8e typo.caption.sm\uff0814px\uff09\u3002"
+    ],
+    "quality_gates": [
+        "\u767b\u5f55\u5931\u8d25\u65f6\u6709\u660e\u786e\u9519\u8bef\u72b6\u6001\u53cd\u9988\u3002",
+        "\u7ba1\u7406\u5458\u8fdb\u5165\u4e3b\u9875\u540e 5 \u79d2\u5185\u53ef\u5b9a\u4f4d\u4eca\u65e5\u5f85\u529e\u4efb\u52a1\u3002",
+        "\u672a\u4f7f\u7528\u4efb\u4f55 indigo/violet/pink \u4f5c\u4e3a\u88c5\u9970\u8272\u3002",
+        "\u672a\u4f7f\u7528 emoji \u4f5c\u4e3a UI \u56fe\u6807\u3002",
+        "\u5168\u7ad9\u6700\u5c0f\u5b57\u53f7\u4e3a 14px\u3002"
+    ]
+}

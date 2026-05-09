@@ -1,0 +1,251 @@
+{
+    "planId": "p_sample-b_001",
+    "dsRef": "default@1.0.0",
+    "projectId": "phase0-s03-sample-b",
+    "intent": "create_screens",
+    "stepKind": "skeleton",
+    "frames": [
+        {
+            "id": "screen-home",
+            "name": "\u9996\u9875",
+            "type": "frame",
+            "bg": "color.bg.base",
+            "children": [
+                {
+                    "id": "home-header",
+                    "name": "\u9876\u90e8\u5bfc\u822a",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "home-logo",
+                            "name": "\u5e94\u7528\u6807\u9898",
+                            "type": "text",
+                            "typo": "typo.serif.display",
+                            "color": "color.text.primary"
+                        },
+                        {
+                            "id": "home-cta-new",
+                            "name": "\u5199\u65b0\u7b14\u8bb0",
+                            "type": "instance",
+                            "component": "button.primary"
+                        }
+                    ]
+                },
+                {
+                    "id": "home-current",
+                    "name": "\u6b63\u5728\u9605\u8bfb",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "home-current-title",
+                            "name": "\u533a\u5757\u6807\u9898",
+                            "type": "text",
+                            "typo": "typo.serif.title",
+                            "color": "color.text.primary"
+                        },
+                        {
+                            "id": "home-latest-note",
+                            "name": "\u6700\u65b0\u7b14\u8bb0\u5361\u7247",
+                            "type": "instance",
+                            "component": "card.article"
+                        }
+                    ]
+                },
+                {
+                    "id": "home-recent",
+                    "name": "\u6700\u8fd1\u9605\u8bfb",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "home-recent-title",
+                            "name": "\u533a\u5757\u6807\u9898",
+                            "type": "text",
+                            "typo": "typo.serif.title",
+                            "color": "color.text.primary"
+                        },
+                        {
+                            "id": "home-books-grid",
+                            "name": "\u4e66\u7c4d\u7f51\u683c",
+                            "type": "frame",
+                            "children": [
+                                {
+                                    "id": "book-1",
+                                    "name": "\u4e66\u7c4d1",
+                                    "type": "instance",
+                                    "component": "book.thumb"
+                                },
+                                {
+                                    "id": "book-2",
+                                    "name": "\u4e66\u7c4d2",
+                                    "type": "instance",
+                                    "component": "book.thumb"
+                                },
+                                {
+                                    "id": "book-3",
+                                    "name": "\u4e66\u7c4d3",
+                                    "type": "instance",
+                                    "component": "book.thumb"
+                                },
+                                {
+                                    "id": "book-4",
+                                    "name": "\u4e66\u7c4d4",
+                                    "type": "instance",
+                                    "component": "book.thumb"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "screen-editor",
+            "name": "\u7b14\u8bb0\u9875",
+            "type": "frame",
+            "bg": "color.bg.base",
+            "children": [
+                {
+                    "id": "editor-top",
+                    "name": "\u9876\u90e8\u4e66\u4fe1\u606f",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "editor-back",
+                            "name": "\u8fd4\u56de",
+                            "type": "instance",
+                            "component": "button.quiet"
+                        },
+                        {
+                            "id": "editor-book-title",
+                            "name": "\u4e66\u540d",
+                            "type": "text",
+                            "typo": "typo.serif.title",
+                            "color": "color.text.primary"
+                        },
+                        {
+                            "id": "editor-book-meta",
+                            "name": "\u4f5c\u8005/\u8fdb\u5ea6",
+                            "type": "text",
+                            "typo": "typo.caption.sm",
+                            "color": "color.text.secondary"
+                        }
+                    ]
+                },
+                {
+                    "id": "editor-chapters",
+                    "name": "\u7ae0\u8282\u9009\u62e9",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "ch-1",
+                            "name": "\u7ae0\u82821",
+                            "type": "instance",
+                            "component": "button.quiet"
+                        },
+                        {
+                            "id": "ch-2",
+                            "name": "\u7ae0\u82822",
+                            "type": "instance",
+                            "component": "button.quiet"
+                        },
+                        {
+                            "id": "ch-3",
+                            "name": "\u7ae0\u82823",
+                            "type": "instance",
+                            "component": "button.quiet"
+                        }
+                    ]
+                },
+                {
+                    "id": "editor-content",
+                    "name": "\u7f16\u8f91\u533a",
+                    "type": "frame",
+                    "maxWidth": "layout.reading.max",
+                    "children": [
+                        {
+                            "id": "editor-note-title",
+                            "name": "\u7b14\u8bb0\u6807\u9898",
+                            "type": "instance",
+                            "component": "input.text"
+                        },
+                        {
+                            "id": "editor-body",
+                            "name": "\u6b63\u6587\u7f16\u8f91",
+                            "type": "instance",
+                            "component": "editor.surface"
+                        }
+                    ]
+                },
+                {
+                    "id": "editor-tags",
+                    "name": "\u6807\u7b7e\u533a",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "tag-1",
+                            "name": "\u6807\u7b7e1",
+                            "type": "instance",
+                            "component": "tag.inline"
+                        },
+                        {
+                            "id": "tag-2",
+                            "name": "\u6807\u7b7e2",
+                            "type": "instance",
+                            "component": "tag.inline"
+                        }
+                    ]
+                },
+                {
+                    "id": "editor-actions",
+                    "name": "\u5e95\u90e8\u64cd\u4f5c",
+                    "type": "frame",
+                    "children": [
+                        {
+                            "id": "editor-save",
+                            "name": "\u4fdd\u5b58",
+                            "type": "instance",
+                            "component": "button.primary"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "components_to_create": [
+        {
+            "id": "book.thumb",
+            "name": "\u4e66\u7c4d\u7f29\u7565\u56fe",
+            "desc": "\u5c01\u9762\u56fe+\u4e66\u540d+\u9605\u8bfb\u8fdb\u5ea6\uff0c\u7528\u4e8e\u9996\u9875\u7f51\u683c"
+        },
+        {
+            "id": "editor.surface",
+            "name": "\u957f\u6587\u672c\u7f16\u8f91\u533a",
+            "desc": "\u591a\u884c\u5bcc\u6587\u672c/ markdown \u7f16\u8f91\u8868\u9762\uff0c\u8212\u9002\u884c\u9ad8\u4e0e\u6696\u8272\u80cc\u666f"
+        },
+        {
+            "id": "progress.bar",
+            "name": "\u9605\u8bfb\u8fdb\u5ea6\u6761",
+            "desc": "\u7ec6\u7ebf\u6027\u8fdb\u5ea6\uff0c\u7528\u4e8e\u4e66\u7c4d\u7f29\u7565\u56fe"
+        }
+    ],
+    "tokens_to_create": [
+        {
+            "id": "layout.reading.max",
+            "name": "\u9605\u8bfb\u6700\u5927\u5bbd\u5ea6",
+            "desc": "\u6b63\u6587\u680f\u6700\u5927\u5bbd\u5ea6\uff0c\u4fdd\u8bc1\u957f\u5185\u5bb9\u53ef\u8bfb\u6027"
+        }
+    ],
+    "craft_asserts": [
+        "\u7f16\u8f91\u5668\u91c7\u7528\u4e2d\u592e\u5355\u5217\u5e03\u5c40\uff0c\u65e0\u4fa7\u8fb9\u680f\u88c5\u9970\uff0c\u5de5\u5177\u6761\u4fdd\u6301\u5355\u8272\u6781\u7b80",
+        "\u9996\u9875\u4e66\u5c01\u5361\u7247\u4f7f\u7528\u67d4\u548c\u89c6\u89c9\u5904\u7406\uff0c\u907f\u514d\u786c\u9510\u89d2",
+        "\u6b63\u6587\u5c42\u7ea7\u4e25\u683c\u533a\u5206\uff1a\u6807\u9898\u4f7f\u7528 serif\uff0c\u6b63\u6587\u4f7f\u7528 sans 16px+",
+        "\u6bcf\u6b21\u4ec5\u51fa\u73b0\u4e00\u79cd\u5f3a\u8c03\u8272\u88c5\u9970\uff0c\u907f\u514d\u591a\u8272\u5e76\u7f6e"
+    ],
+    "quality_gates": [
+        "\u6240\u6709\u6b63\u6587\u6587\u5b57\u4e0d\u5c0f\u4e8e 16px\uff0c\u884c\u9ad8\u8212\u9002",
+        "\u7f16\u8f91\u5668\u9875\u9762\u65e0\u591a\u5c42\u7ea7\u4fa7\u8fb9\u680f\u3001\u65e0\u9ad8\u5bf9\u6bd4\u8272\u5757",
+        "\u6807\u7b7e\u4f7f\u7528 inline \u5f62\u5f0f\u5448\u73b0\uff0c\u4e0e\u6b63\u6587\u4fdd\u6301\u547c\u5438\u611f",
+        "\u4e66\u5c01\u7f51\u683c\u4fe1\u606f\u5bc6\u5ea6\u9002\u4e2d\uff0c\u907f\u514d\u62e5\u6324\u5c0f\u5b57"
+    ],
+    "rationale": "\u6784\u5efa\u53cc\u5c4f\u9aa8\u67b6\uff1a\u9996\u9875\u91c7\u7528\u4e66\u5c01\u7f51\u683c+\u7b14\u8bb0\u5361\u7247+\u4e3b CTA \u7684\u6696\u8272\u9605\u8bfb\u4fe1\u606f\u6d41\uff1b\u7b14\u8bb0\u9875\u91c7\u7528\u9876\u90e8\u4e66\u4fe1\u606f+\u7ae0\u8282\u9009\u62e9+\u4e2d\u592e\u957f\u6587\u672c\u7f16\u8f91+\u6807\u7b7e\u7684\u6c89\u6d78\u7f16\u8f91\u5668\u5e03\u5c40\u3002\u9075\u5faa warm-editorial \u65b9\u5411\uff0c\u4ee5 serif \u6807\u9898\u914d sans \u6b63\u6587\uff0c\u4fdd\u6301\u514b\u5236\u7528\u8272\u3001\u65e0\u4fa7\u8fb9\u680f\u88c5\u9970\u3001\u65e0\u9ad8\u5bf9\u6bd4\u8272\u5757\uff0c\u4f18\u5148\u957f\u5185\u5bb9\u53ef\u8bfb\u6027\u3002"
+}

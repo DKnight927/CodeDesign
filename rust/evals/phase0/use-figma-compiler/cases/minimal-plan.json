@@ -1,0 +1,54 @@
+{
+  "planId": "plan_s02_minimal",
+  "dsRef": "default@1.0.0",
+  "projectId": "phase0-s02",
+  "intent": "create_screens",
+  "stepKind": "skeleton",
+  "frames": [
+    {
+      "localId": "f1",
+      "name": "Onboarding / 1. Welcome",
+      "page": "page-1",
+      "size": { "w": 375, "h": 812 },
+      "layout": { "mode": "VERTICAL", "padding": "space.xl", "gap": "space.lg" },
+      "fillRef": "color.bg.base",
+      "children": [
+        { "type": "text", "styleRef": "typo.title.lg", "fillRef": "color.text.primary", "content": "欢迎" },
+        { "type": "text", "styleRef": "typo.body.md", "fillRef": "color.text.secondary", "content": "开始配置你的第一个项目" },
+        { "type": "instance", "componentRef": "button.primary", "props": { "label": "开始", "size": "lg" } }
+      ]
+    },
+    {
+      "localId": "f2",
+      "name": "Onboarding / 2. Pick team",
+      "page": "page-1",
+      "size": { "w": 375, "h": 812 },
+      "layout": { "mode": "VERTICAL", "padding": "space.xl", "gap": "space.md" },
+      "fillRef": "color.bg.base",
+      "children": [
+        { "type": "text", "styleRef": "typo.title.md", "fillRef": "color.text.primary", "content": "选择你的团队" },
+        { "type": "instance", "componentRef": "input.text", "props": { "label": "团队名称", "size": "lg" } },
+        { "type": "instance", "componentRef": "button.primary", "props": { "label": "下一步", "size": "lg" } }
+      ]
+    },
+    {
+      "localId": "f3",
+      "name": "Onboarding / 3. Done",
+      "page": "page-1",
+      "size": { "w": 375, "h": 812 },
+      "layout": { "mode": "VERTICAL", "padding": "space.xl", "gap": "space.lg" },
+      "fillRef": "color.bg.base",
+      "children": [
+        { "type": "text", "styleRef": "typo.title.lg", "fillRef": "color.text.primary", "content": "一切就绪" },
+        { "type": "text", "styleRef": "typo.body.md", "fillRef": "color.text.secondary", "content": "你可以开始使用了" },
+        { "type": "instance", "componentRef": "button.primary", "props": { "label": "进入主页", "size": "lg" } }
+      ]
+    }
+  ],
+  "components_to_create": [],
+  "tokens_to_create": [],
+  "craft_asserts": ["typography", "spacing"],
+  "quality_gates": ["ds.compliance", "ai-slop.lint", "spacing.scale"],
+  "dependsOn": [],
+  "rationale": "Minimal 3-frame onboarding to verify the compiler end-to-end."
+}

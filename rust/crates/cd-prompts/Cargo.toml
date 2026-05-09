@@ -1,0 +1,18 @@
+[package]
+name = "cd-prompts"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+serde       = { workspace = true }
+serde_json  = { workspace = true }
+
+cd-ds       = { path = "../cd-ds" }
+cd-craft    = { path = "../cd-craft" }
+cd-critique = { path = "../cd-critique" }
+cd-skill    = { path = "../cd-skill" }

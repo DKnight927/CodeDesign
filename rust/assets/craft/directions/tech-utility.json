@@ -1,0 +1,30 @@
+{
+  "id": "tech-utility",
+  "name": "Tech Utility",
+  "oneLine": "Dark-mode-capable, monochrome + data accents, mono/sans mixed, information-dense.",
+  "posture": {
+    "density": "dense",
+    "tone": ["engineered", "precise", "functional"],
+    "cornerRadius": "xs",
+    "shadow": "flat-only"
+  },
+  "palette": {
+    "bg":   { "base": "oklch(0.15 0.01 240)", "raised": "oklch(0.20 0.01 240)" },
+    "text": { "primary": "oklch(0.95 0 0)", "secondary": "oklch(0.75 0 0)", "tertiary": "oklch(0.55 0 0)" },
+    "border": { "default": "oklch(0.30 0.01 240)", "strong": "oklch(0.45 0.01 240)" },
+    "brand":  { "primary": "oklch(0.75 0.15 200)", "onPrimary": "oklch(0.15 0.01 240)" },
+    "state":  { "info": "oklch(0.75 0.15 200)", "success": "oklch(0.75 0.15 150)", "warning": "oklch(0.80 0.15 85)", "danger": "oklch(0.70 0.18 25)" }
+  },
+  "typography": {
+    "stack": ["Inter", "IBM Plex Sans"],
+    "displayStack": ["IBM Plex Sans Condensed"],
+    "monoStack": ["JetBrains Mono", "IBM Plex Mono", "SF Mono"],
+    "scale": [11, 12, 13, 14, 16, 18, 22, 28, 36]
+  },
+  "spacingBase": 4,
+  "rules": [
+    "Numeric values always in mono",
+    "Tables allowed down to 11px;正文 ≥ 13px",
+    "Data visualization accent colors limited to palette.state and one neutral chart color"
+  ]
+}

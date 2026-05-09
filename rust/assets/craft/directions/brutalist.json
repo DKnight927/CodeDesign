@@ -1,0 +1,29 @@
+{
+  "id": "brutalist",
+  "name": "Brutalist",
+  "oneLine": "Stark black-and-white with one alarm accent, raw geometry, oversized type.",
+  "posture": {
+    "density": "dense-blocks",
+    "tone": ["bold", "raw", "confrontational"],
+    "cornerRadius": "none",
+    "shadow": "none"
+  },
+  "palette": {
+    "bg":   { "base": "oklch(1 0 0)", "raised": "oklch(0.98 0 0)" },
+    "text": { "primary": "oklch(0 0 0)", "secondary": "oklch(0.25 0 0)", "tertiary": "oklch(0.45 0 0)" },
+    "border": { "default": "oklch(0 0 0)", "strong": "oklch(0 0 0)" },
+    "brand":  { "primary": "oklch(0.70 0.22 25)", "onPrimary": "oklch(1 0 0)" },
+    "state":  { "info": "oklch(0 0 0)", "success": "oklch(0 0 0)", "warning": "oklch(0.70 0.22 25)", "danger": "oklch(0.70 0.22 25)" }
+  },
+  "typography": {
+    "stack": ["Space Grotesk", "JetBrains Mono", "IBM Plex Mono"],
+    "displayStack": ["Space Grotesk", "Neue Haas Grotesk"],
+    "scale": [14, 16, 20, 28, 40, 64, 96, 144]
+  },
+  "spacingBase": 8,
+  "rules": [
+    "Borders are 2px minimum, solid black",
+    "No rounded corners anywhere",
+    "Use oversized display type (>80px) at least once per page"
+  ]
+}

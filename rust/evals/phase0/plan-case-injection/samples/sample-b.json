@@ -1,0 +1,52 @@
+{
+  "id": "sample-b",
+  "direction": "warm-editorial",
+  "dsSummary": {
+    "colors": [
+      "color.bg.base (warm cream)",
+      "color.bg.elevated (off-white)",
+      "color.text.primary (warm near-black)",
+      "color.text.secondary (warm brown-gray)",
+      "color.accent.primary (terracotta)",
+      "color.accent.secondary (olive)",
+      "color.border.subtle"
+    ],
+    "typography": [
+      "typo.serif.display (serif, 48/56)",
+      "typo.serif.title (serif, 28/36)",
+      "typo.body.md (sans 16/26, generous line-height)",
+      "typo.caption.sm (14/20)"
+    ],
+    "spacingBase": 8,
+    "components": ["button.primary", "button.quiet", "input.text", "card.article", "tag.inline"],
+    "doNotRules": [
+      "Never pair more than one decorative color with an accent.",
+      "Body copy always serif-friendly sans at ≥16 px.",
+      "No violet/indigo/neon."
+    ]
+  },
+  "prd": "读书笔记应用。首页展示近期阅读的书(封面 + 书名 + 阅读进度)、当前正在读的书的最新笔记卡片、以及一个写新笔记的主 CTA。笔记页:顶部书信息 + 章节选择 + 正文长段落编辑 + 标签。强调阅读感、长内容友好、慢节奏。",
+  "cases": [
+    {
+      "id": "readwise-home",
+      "description": "Readwise 首页:书封面网格 + 每日 highlight 卡片,serif 标题 + sans body,暖米色底。",
+      "tags": ["reading","serif","warm"],
+      "doNot": ["不要密集小字","不要硬锐角卡片"],
+      "scenarios": ["home","feed"]
+    },
+    {
+      "id": "medium-editor",
+      "description": "Medium 编辑器:左侧窄 margin、中央 680px 正文栏、serif 大标题、单色极简工具条。",
+      "tags": ["editor","long-form","central"],
+      "doNot": ["不要侧边栏装饰","不要工具条颜色化"],
+      "scenarios": ["editor"]
+    },
+    {
+      "id": "bear-notes",
+      "description": "Bear 笔记页:左栏笔记列表 + 主栏 markdown 编辑,标签用 #inline 形式,暖色强调。",
+      "tags": ["notes","tag","warm"],
+      "doNot": ["不要多层级侧栏","不要强高对比色块"],
+      "scenarios": ["editor","list"]
+    }
+  ]
+}

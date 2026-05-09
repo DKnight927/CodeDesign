@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "enforcement": "balanced",
+  "allowExtension": {
+    "tokens": false,
+    "components": false,
+    "patterns": true
+  },
+  "craft": {
+    "requires": ["typography", "color", "spacing", "state-coverage", "anti-ai-slop"],
+    "overrides": {}
+  },
+  "a11y": {
+    "contrastMin": 4.5,
+    "largeContrastMin": 3.0,
+    "requireFocusRing": true
+  },
+  "typography": {
+    "maxSizesPerFrame": 3,
+    "maxWeightsPerFrame": 2
+  },
+  "spacing": {
+    "base": 4,
+    "disallowOddPx": true
+  },
+  "color": {
+    "maxHuesPerFrame": 4,
+    "brandColorForInteractiveOnly": true
+  }
+}

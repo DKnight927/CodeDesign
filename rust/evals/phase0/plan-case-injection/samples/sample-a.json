@@ -1,0 +1,53 @@
+{
+  "id": "sample-a",
+  "direction": "neutral-modern",
+  "dsSummary": {
+    "colors": [
+      "color.bg.base (low-sat near-white)",
+      "color.bg.elevated",
+      "color.text.primary (near-black)",
+      "color.text.secondary (muted gray)",
+      "color.border.subtle",
+      "color.accent.primary (restrained single accent)",
+      "color.feedback.error"
+    ],
+    "typography": [
+      "typo.display.xl (72/80, -2% tracking)",
+      "typo.title.lg (32/40)",
+      "typo.title.md (24/32)",
+      "typo.body.md (16/24)",
+      "typo.caption.sm (14/20)"
+    ],
+    "spacingBase": 8,
+    "components": ["button.primary", "button.secondary", "input.text", "card.default"],
+    "doNotRules": [
+      "Never use indigo/violet/pink as decorative accent.",
+      "Never use emoji as UI icon.",
+      "Min font size 14 px."
+    ]
+  },
+  "prd": "SaaS 协作平台登录与主页。登录页:邮箱 + 密码 + SSO 入口,忘记密码链接,登录失败须明确错误。主页:左侧导航(项目、团队、个人设置),主区展示最近项目卡片、任务待办、团队动态。目标用户是企业团队管理员,强调清晰、专业、不花哨,首要任务是 5 秒内知道自己今天要做什么。",
+  "cases": [
+    {
+      "id": "linear-inbox",
+      "description": "Linear 的 inbox 页:左侧窄导航 + 右侧主列表,通篇灰阶 + 单点紫作为未读指示,字号严格 3 档。",
+      "tags": ["b2b","dense","list"],
+      "doNot": ["不要引入多色标签","不要引入大 hero 区域"],
+      "scenarios": ["dashboard","inbox"]
+    },
+    {
+      "id": "notion-login",
+      "description": "Notion 登录页:中央单卡片,表单 + SSO 三按钮垂直堆叠,大量留白,正文字号较大。",
+      "tags": ["login","minimal","central"],
+      "doNot": ["不要满版背景图","不要装饰性插画"],
+      "scenarios": ["login"]
+    },
+    {
+      "id": "stripe-dashboard",
+      "description": "Stripe dashboard 首页:顶部 KPI 条 + 中部列表 + 右侧抽屉预览,以灰色为主,蓝色作为唯一强调色。",
+      "tags": ["dashboard","kpi","data"],
+      "doNot": ["不要并列多种强调色","不要饱和背景块"],
+      "scenarios": ["dashboard"]
+    }
+  ]
+}

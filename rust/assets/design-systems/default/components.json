@@ -1,0 +1,30 @@
+{
+  "$schema": "../../schemas/components.schema.json",
+  "version": "1.0.0",
+  "components": {
+    "button.primary": {
+      "variants": { "size": ["sm", "md", "lg"], "state": ["default", "hover", "active", "disabled", "loading"] },
+      "slots": { "label": "text", "leadingIcon": "icon?", "trailingIcon": "icon?" },
+      "tokens": { "bg": "brand.primary", "text": "text.onBrand", "radius": "sm", "padY": "sm", "padX": "md" }
+    },
+    "button.secondary": {
+      "variants": { "size": ["sm", "md", "lg"], "state": ["default", "hover", "active", "disabled"] },
+      "slots": { "label": "text" },
+      "tokens": { "bg": "bg.raised", "text": "text.primary", "border": "border.default", "radius": "sm" }
+    },
+    "button.tertiary": {
+      "variants": { "size": ["sm", "md"], "state": ["default", "hover", "disabled"] },
+      "slots": { "label": "text" },
+      "tokens": { "bg": "transparent", "text": "text.primary", "radius": "sm" }
+    },
+    "input.text": {
+      "variants": { "size": ["sm", "md", "lg"], "state": ["default", "focus", "error", "disabled"] },
+      "slots": { "label": "text", "helper": "text?", "error": "text?", "prefix": "node?", "suffix": "node?" },
+      "tokens": { "bg": "bg.base", "text": "text.primary", "border": "border.default", "radius": "sm" }
+    },
+    "card.default": {
+      "variants": { "elevation": ["flat", "raised"] },
+      "tokens": { "bg": "bg.base", "border": "border.default", "radius": "md", "pad": "lg" }
+    }
+  }
+}

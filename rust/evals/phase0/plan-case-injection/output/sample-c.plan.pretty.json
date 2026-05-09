@@ -1,0 +1,152 @@
+{
+    "planId": "p_sample-c_001",
+    "dsRef": "default@1.0.0",
+    "projectId": "phase0-s03-sample-c",
+    "intent": "create_screens",
+    "stepKind": "skeleton",
+    "frames": [
+        {
+            "frameId": "f-sre-dashboard",
+            "frameName": "SRE \u5b9e\u65f6\u6307\u6807\u770b\u677f",
+            "regions": [
+                {
+                    "regionId": "r-top-kpi",
+                    "regionName": "\u9876\u90e8 KPI \u6307\u6807\u884c",
+                    "kind": "horizontal-bar",
+                    "bg": "color.bg.elevated",
+                    "items": [
+                        {
+                            "ref": "metric.card",
+                            "valueTypo": "typo.mono.sm",
+                            "labelTypo": "typo.label.xs"
+                        },
+                        {
+                            "ref": "metric.card",
+                            "valueTypo": "typo.mono.sm",
+                            "labelTypo": "typo.label.xs"
+                        },
+                        {
+                            "ref": "metric.card",
+                            "valueTypo": "typo.mono.sm",
+                            "labelTypo": "typo.label.xs"
+                        },
+                        {
+                            "ref": "metric.card",
+                            "valueTypo": "typo.mono.sm",
+                            "labelTypo": "typo.label.xs"
+                        }
+                    ]
+                },
+                {
+                    "regionId": "r-mid-charts",
+                    "regionName": "\u4e2d\u90e8 2\u00d72 \u56fe\u8868\u5bab\u683c",
+                    "kind": "grid",
+                    "columns": 2,
+                    "rows": 2,
+                    "bg": "color.bg.base",
+                    "items": [
+                        {
+                            "ref": "chart.timeseries",
+                            "stroke": "color.data.1",
+                            "bg": "color.bg.elevated"
+                        },
+                        {
+                            "ref": "chart.timeseries",
+                            "stroke": "color.data.2",
+                            "bg": "color.bg.elevated"
+                        },
+                        {
+                            "ref": "chart.timeseries",
+                            "stroke": "color.data.3",
+                            "bg": "color.bg.elevated"
+                        },
+                        {
+                            "ref": "chart.timeseries",
+                            "stroke": "color.data.4",
+                            "bg": "color.bg.elevated"
+                        }
+                    ]
+                },
+                {
+                    "regionId": "r-bottom-alerts",
+                    "regionName": "\u4e0b\u90e8\u5b9e\u65f6\u544a\u8b66\u5217\u8868",
+                    "kind": "table",
+                    "bg": "color.bg.elevated",
+                    "headerTypo": "typo.label.xs",
+                    "rowRef": "table.row",
+                    "columns": [
+                        {
+                            "header": "\u65f6\u95f4",
+                            "cellTypo": "typo.mono.sm"
+                        },
+                        {
+                            "header": "\u7b49\u7ea7",
+                            "cellRef": "tag.status",
+                            "statusTokens": [
+                                "color.feedback.critical",
+                                "color.feedback.warning",
+                                "color.feedback.ok"
+                            ]
+                        },
+                        {
+                            "header": "\u670d\u52a1",
+                            "cellTypo": "typo.body.sm"
+                        },
+                        {
+                            "header": "\u6458\u8981",
+                            "cellTypo": "typo.body.sm"
+                        },
+                        {
+                            "header": "\u64cd\u4f5c",
+                            "cellRef": "button.primary"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "components_to_create": [
+        {
+            "componentId": "chart.timeseries",
+            "purpose": "\u65f6\u95f4\u5e8f\u5217\u6298\u7ebf\u9762\u677f\uff0c\u627f\u8f7d\u5355\u6761\u6216\u591a\u6761\u6298\u7ebf\uff0c\u4ec5\u4f9b\u6570\u636e\u53ef\u89c6\u5316\u533a\u57df\u4f7f\u7528"
+        }
+    ],
+    "craft_asserts": [
+        {
+            "assert": "information-density",
+            "level": "high",
+            "scope": "global"
+        },
+        {
+            "assert": "no-decorative-gradients",
+            "level": "strict"
+        },
+        {
+            "assert": "data-color-isolation",
+            "level": "strict",
+            "scope": [
+                "r-mid-charts"
+            ]
+        },
+        {
+            "assert": "alert-restraint",
+            "level": "strict",
+            "note": "\u5173\u952e\u544a\u8b66\u4f7f\u7528\u5c0f\u8272\u70b9+\u7070\u9636\u6587\u5b57\u4f20\u8fbe\uff0c\u7981\u6b62\u5927\u9762\u79ef\u8272\u5757\u6216 emoji"
+        }
+    ],
+    "quality_gates": [
+        {
+            "gate": "typography-contrast",
+            "mustPass": true
+        },
+        {
+            "gate": "mono-usage-on-metrics",
+            "rule": "KPI \u6570\u503c\u4e0e\u56fe\u8868\u8f74\u6807\u7b7e\u987b\u4f7f\u7528 typo.mono.sm"
+        },
+        {
+            "gate": "data-color-hygiene",
+            "rule": "data colors \u4e0d\u5f97\u51fa\u73b0\u5728\u6309\u94ae\u3001\u80cc\u666f\u3001\u6587\u672c\u7b49\u975e\u6570\u636e\u53ef\u89c6\u533a\u57df"
+        }
+    ],
+    "rationale": "SRE \u5b9e\u65f6\u770b\u677f\u9aa8\u67b6\uff1a\u91c7\u7528\u9ad8\u4fe1\u606f\u5bc6\u5ea6\u7684\u6df1\u8272\u5e03\u5c40\uff0c\u9876\u90e8\u6a2a\u5411 KPI \u884c\u4f7f\u7528 metric.card + mono \u6570\u503c\uff1b\u4e2d\u90e8 2\u00d72 \u5bab\u683c\u4f7f\u7528\u6298\u7ebf\u9762\u677f\u627f\u8f7d\u6570\u636e\u5e8f\u5217\uff0c\u4e25\u683c\u9694\u79bb data colors\uff1b\u4e0b\u90e8\u544a\u8b66\u5217\u8868\u91c7\u7528 table.row \u7ed3\u6784\uff0c\u7b49\u7ea7\u901a\u8fc7 tag.status \u5c0f\u8272\u70b9\u4e0e\u53cd\u9988\u8272\u8868\u8fbe\uff0c\u907f\u514d\u55a7\u5bbe\u593a\u4e3b\u3002\u6574\u4f53\u9075\u5faa tech-utility \u65b9\u5411\uff0c\u878d\u5408 Grafana \u7d27\u51d1\u6392\u7248\u3001Datadog \u8868\u683c\u544a\u8b66\u4e0e Linear \u514b\u5236\u7528\u8272\u7684\u53c2\u8003\u7279\u5f81\u3002"
+}
