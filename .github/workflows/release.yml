@@ -154,6 +154,8 @@ jobs:
       - name: Publish to npm
         if: env.HAS_NPM_TOKEN == 'true'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          npm publish --access public
         working-directory: npm/codedesign
