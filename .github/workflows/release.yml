@@ -47,7 +47,7 @@ jobs:
             artifact: codedesign-linux-arm64
             cross: true
           - name: darwin-x64
-            os: macos-13
+            os: macos-latest
             target: x86_64-apple-darwin
             artifact: codedesign-darwin-x64
             cross: false
