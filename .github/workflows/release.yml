@@ -132,7 +132,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          registry-url: 'https://registry.npmjs.org'
 
       - name: Download all build artifacts
         uses: actions/download-artifact@v4
@@ -156,7 +155,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          # setup-node sets NPM_CONFIG_USERCONFIG to a temp .npmrc; write there.
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" >> "${NPM_CONFIG_USERCONFIG}"
+          # Write auth to default ~/.npmrc (no registry-url means setup-node won't override it).
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
           npm publish --access public
         working-directory: npm/codedesign
